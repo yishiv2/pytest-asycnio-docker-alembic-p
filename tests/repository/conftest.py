@@ -47,7 +47,7 @@ async def start_mysql_container():
 
 @pytest_asyncio.fixture(scope="function")
 # async def db_session():
-async def db_session(start_mysql_container, request):
+async def db_session(request):
     """テストごとに新しいDBセッションを作成する"""
     # database_url = start_mysql_container
     database_url = "mysql+aiomysql://testuser:testpassword@127.0.0.1:3307/pytestdb"
