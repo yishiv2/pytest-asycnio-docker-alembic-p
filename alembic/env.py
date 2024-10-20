@@ -16,13 +16,14 @@ config = context.config
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 # 環境変数からデータベースURLを取得
-DATABASE_URL = os.getenv("DATABASE_URL")
-
+# DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = "mysql+aiomysql://root:rootpassword@localhost:3307/pytestdb"
+print(DATABASE_URL,"#####")
 # マイグレーション用の設定
 config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 target_metadata = Base.metadata
-
+# target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

@@ -14,6 +14,9 @@ pytest-asyncio = "*"
 httpx = "*"
 python-dotenv = "*"
 cryptography = "*"
+docker = "*"
+aiodocker = "*"
+pymysql = "*"
 
 [dev-packages]
 
